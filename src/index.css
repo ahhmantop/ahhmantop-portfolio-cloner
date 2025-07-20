@@ -1,88 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Space-themed portfolio design system */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --background: 240 10% 5.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 240 6% 10%;
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.9% 83.9%;
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Space theme colors */
+    --space-bg: 240 10% 5.9%;
+    --space-card: 240 6% 10%;
+    --blue-flow: 199 89% 48%;
+    --teal-flow: 188 94% 43%;
+    --purple-alien: 139 69% 65%;
+    --green-alien: 142 100% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Sidebar tokens */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -96,10 +50,229 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-pixelify;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Pixelify Sans', monospace;
+    background-color: hsl(var(--space-bg));
+  }
+}
+
+@layer utilities {
+  .font-pixelify {
+    font-family: 'Pixelify Sans', monospace;
+  }
+
+  .bg-space-bg {
+    background-color: hsl(var(--space-bg));
+  }
+
+  .bg-space-card {
+    background-color: hsl(var(--space-card));
+  }
+
+  .text-blue-flow {
+    color: hsl(var(--blue-flow));
+  }
+
+  .text-teal-flow {
+    color: hsl(var(--teal-flow));
+  }
+
+  .border-blue-flow {
+    border-color: hsl(var(--blue-flow));
+  }
+
+  .bg-blue-flow {
+    background-color: hsl(var(--blue-flow));
+  }
+
+  .hover\:bg-blue-flow:hover {
+    background-color: hsl(var(--blue-flow));
+  }
+
+  .text-purple-alien {
+    color: hsl(var(--purple-alien));
+  }
+
+  .text-green-alien {
+    color: hsl(var(--green-alien));
+  }
+
+  .space-background {
+    background: linear-gradient(135deg, hsl(var(--space-bg)) 0%, rgba(14, 23, 51, 1) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flowing-bg {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flowing-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(14, 165, 233, 0.1) 50%, transparent 70%);
+    animation: flow 3s ease-in-out infinite;
+  }
+
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .stars::before,
+  .stars::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 
+      100px 200px white,
+      300px 100px white,
+      500px 300px white,
+      700px 150px white,
+      900px 250px white,
+      200px 400px white,
+      600px 500px white,
+      800px 350px white,
+      150px 600px white,
+      400px 700px white,
+      1100px 400px white,
+      1200px 200px white,
+      50px 800px white,
+      350px 50px white,
+      750px 600px white,
+      950px 50px white,
+      1000px 700px white,
+      250px 900px white,
+      650px 800px white,
+      1300px 300px white;
+    animation: sparkle 4s linear infinite;
+  }
+
+  .stars::after {
+    width: 1px;
+    height: 1px;
+    box-shadow: 
+      150px 250px white,
+      350px 150px white,
+      550px 350px white,
+      750px 200px white,
+      950px 300px white,
+      250px 450px white,
+      650px 550px white,
+      850px 400px white,
+      200px 650px white,
+      450px 750px white,
+      1150px 450px white,
+      1250px 250px white,
+      100px 850px white,
+      400px 100px white,
+      800px 650px white,
+      1000px 100px white,
+      1050px 750px white,
+      300px 950px white,
+      700px 850px white,
+      1350px 350px white;
+    animation: sparkle 6s linear infinite reverse;
+  }
+
+  .pixel-spaceship {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .nav-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.3));
+  }
+
+  .nav-icon:hover {
+    filter: drop-shadow(0 0 16px rgba(14, 165, 233, 0.6));
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--blue-flow));
+    white-space: nowrap;
+    animation: typewriter 4s steps(40) 1s both, blink 1s step-end infinite;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+  }
+}
+
+@keyframes flow {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: hsl(var(--blue-flow)); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(50px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
   }
 }

@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				pixelify: ['Pixelify Sans', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +64,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Space theme colors
+				'space': {
+					bg: 'hsl(var(--space-bg))',
+					card: 'hsl(var(--space-card))',
+				},
+				'blue-flow': 'hsl(var(--blue-flow))',
+				'teal-flow': 'hsl(var(--teal-flow))',
+				'purple-alien': 'hsl(var(--purple-alien))',
+				'green-alien': 'hsl(var(--green-alien))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
