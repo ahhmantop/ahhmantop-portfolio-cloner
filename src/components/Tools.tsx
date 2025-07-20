@@ -1,26 +1,80 @@
-import { Badge } from "@/components/ui/badge";
+import { 
+  Code2, 
+  FileCode, 
+  Zap, 
+  Palette, 
+  Layers, 
+  Server, 
+  Globe, 
+  Database, 
+  Cloud, 
+  Container, 
+  GitBranch, 
+  Github, 
+  Code, 
+  Figma, 
+  TestTube,
+  Package,
+  Cpu
+} from "lucide-react";
 
 export default function Tools() {
   const skillCategories = [
     {
       title: "Frontend Development",
       color: "text-blue-flow",
-      skills: ["React", "TypeScript", "Next.js", "Vue.js", "Tailwind CSS", "Sass", "HTML5", "CSS3"]
+      skills: [
+        { name: "React", icon: Code2 },
+        { name: "TypeScript", icon: FileCode },
+        { name: "Next.js", icon: Zap },
+        { name: "Vue.js", icon: Code2 },
+        { name: "Tailwind CSS", icon: Palette },
+        { name: "Sass", icon: Palette },
+        { name: "HTML5", icon: Code },
+        { name: "CSS3", icon: Layers }
+      ]
     },
     {
       title: "Backend Development", 
       color: "text-teal-flow",
-      skills: ["Node.js", "Express", "Python", "Django", "PHP", "Laravel", "REST APIs", "GraphQL"]
+      skills: [
+        { name: "Node.js", icon: Server },
+        { name: "Express", icon: Server },
+        { name: "Python", icon: Code2 },
+        { name: "Django", icon: Server },
+        { name: "PHP", icon: Code2 },
+        { name: "Laravel", icon: Server },
+        { name: "REST APIs", icon: Globe },
+        { name: "GraphQL", icon: Globe }
+      ]
     },
     {
       title: "Database & Cloud",
       color: "text-purple-alien", 
-      skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "AWS", "Firebase", "Docker", "Kubernetes"]
+      skills: [
+        { name: "MongoDB", icon: Database },
+        { name: "PostgreSQL", icon: Database },
+        { name: "MySQL", icon: Database },
+        { name: "Redis", icon: Database },
+        { name: "AWS", icon: Cloud },
+        { name: "Firebase", icon: Cloud },
+        { name: "Docker", icon: Container },
+        { name: "Kubernetes", icon: Container }
+      ]
     },
     {
       title: "Tools & Others",
       color: "text-green-alien",
-      skills: ["Git", "GitHub", "VS Code", "Figma", "Postman", "Jest", "Webpack", "Vite"]
+      skills: [
+        { name: "Git", icon: GitBranch },
+        { name: "GitHub", icon: Github },
+        { name: "VS Code", icon: Code },
+        { name: "Figma", icon: Figma },
+        { name: "Postman", icon: Globe },
+        { name: "Jest", icon: TestTube },
+        { name: "Webpack", icon: Package },
+        { name: "Vite", icon: Zap }
+      ]
     }
   ];
 
@@ -46,16 +100,25 @@ export default function Tools() {
               <h3 className={`text-2xl font-bold mb-6 ${category.color}`}>
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <Badge 
-                    key={skillIndex}
-                    variant="secondary"
-                    className="bg-space-card text-foreground border border-border hover:border-blue-flow transition-colors duration-300 text-sm py-2 px-3"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
+              <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                {category.skills.map((skill, skillIndex) => {
+                  const IconComponent = skill.icon;
+                  return (
+                    <div 
+                      key={skillIndex}
+                      className="group flex flex-col items-center justify-center p-4 bg-space-card/50 rounded-lg border border-border hover:border-blue-flow transition-all duration-300 hover:scale-105"
+                      title={skill.name}
+                    >
+                      <IconComponent 
+                        size={32} 
+                        className="text-muted-foreground group-hover:text-blue-flow transition-colors duration-300" 
+                      />
+                      <span className="text-xs text-muted-foreground mt-2 text-center group-hover:text-foreground transition-colors duration-300">
+                        {skill.name}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}
