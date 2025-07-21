@@ -70,7 +70,7 @@ export default function Tools() {
   return (
     <section id="tools" className="py-20 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 slide-up">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-flow mb-4 glow-text">
             Tools & Technologies
           </h2>

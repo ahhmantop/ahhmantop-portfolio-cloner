@@ -16,32 +16,6 @@ export default function Experience() {
         "Participated in code reviews and agile development processes"
       ],
       technologies: ["React", "TypeScript", "Tailwind CSS", "Git"]
-    },
-    {
-      title: "Computer Science Student",
-      company: "University of California",
-      location: "Berkeley, CA", 
-      period: "Sep 2020 - May 2024",
-      description: [
-        "Bachelor of Science in Computer Science with 3.8 GPA",
-        "Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems",
-        "Led development team for capstone project - a collaborative learning platform",
-        "Active member of CS student association and coding bootcamp mentor"
-      ],
-      technologies: ["Java", "Python", "C++", "JavaScript", "SQL"]
-    },
-    {
-      title: "Web Development Freelancer",
-      company: "Self-Employed",
-      location: "Remote",
-      period: "Jan 2023 - Present",
-      description: [
-        "Built custom websites for local businesses and startups",
-        "Delivered 8+ projects with 100% client satisfaction rate",
-        "Specialized in responsive design and modern web technologies",
-        "Managed full project lifecycle from planning to deployment"
-      ],
-      technologies: ["React", "Next.js", "WordPress", "PHP", "MySQL"]
     }
   ];
 

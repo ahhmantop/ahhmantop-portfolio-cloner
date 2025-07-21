@@ -236,7 +236,7 @@
   }
 
   .animate-scroll-right {
-    animation: scrollRight 30s linear infinite;
+    animation: scrollRight 20s linear infinite;
   }
 }
 
