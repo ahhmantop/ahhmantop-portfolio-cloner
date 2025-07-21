@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Tools from "@/components/Tools";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <Tools />
+      <Education />
       <Experience />
       <Contact />
       <footer className="py-8 px-6 border-t border-border relative z-10">

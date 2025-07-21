@@ -234,6 +234,10 @@
   .glow-text {
     text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
   }
+
+  .animate-scroll-right {
+    animation: scrollRight 30s linear infinite;
+  }
 }
 
 @keyframes flow {
@@ -274,5 +278,14 @@
   to { 
     opacity: 1; 
     transform: translateY(0);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
