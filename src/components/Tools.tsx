@@ -134,12 +134,12 @@ export default function Tools() {
         </div>
 
         {/* Scrolling Tech Icons */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           {/* Fade gradients */}
+          <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
           
-          
-          
-          <div className="flex animate-scroll-right">
+          <div className="flex animate-scroll-right md:animate-scroll-right-fast">
             {duplicatedSkills.map((skill, index) => {
             const IconComponent = skill.icon;
             return <div key={index} className="flex-shrink-0 mx-6 flex flex-col items-center justify-center group">

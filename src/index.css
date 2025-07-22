@@ -236,6 +236,10 @@
   }
 
   .animate-scroll-right {
+    animation: scrollRight 25s linear infinite;
+  }
+
+  .animate-scroll-right-fast {
     animation: scrollRight 15s linear infinite;
   }
 }
