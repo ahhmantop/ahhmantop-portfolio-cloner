@@ -72,10 +72,10 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center relative px-6 pt-20">
       <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Animated spaceships */}
-        <div className="absolute top-4 left-4 opacity-70">
+        <div className="absolute top-4 left-4 md:top-4 md:left-4 sm:-top-16 sm:left-1/2 sm:-translate-x-1/2 opacity-70">
           {spaceshipSvg}
         </div>
-        <div className="absolute top-8 right-4 opacity-60">
+        <div className="absolute top-8 right-4 md:top-8 md:right-4 sm:bottom-0 sm:right-1/2 sm:translate-x-1/2 opacity-60">
           {alienShipSvg}
         </div>
 
