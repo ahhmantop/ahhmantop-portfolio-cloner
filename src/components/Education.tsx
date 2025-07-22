@@ -40,6 +40,22 @@ export default function Education() {
         "Successfully deployed 5 full-stack applications",
         "Mentored junior bootcamp students"
       ]
+    },
+    {
+      title: "CCNA - Cisco Certified Network Associate",
+      subtitle: "Networking Certification",
+      institution: "Cisco Systems",
+      location: "Online",
+      period: "2023",
+      status: "Certified",
+      grade: "Pass",
+      description: "Comprehensive certification covering network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability.",
+      keySubjects: ["Network Fundamentals", "Routing & Switching", "Network Security", "IP Services", "Network Automation", "Troubleshooting"],
+      achievements: [
+        "Validated networking skills and knowledge",
+        "Demonstrated ability to install, configure, and troubleshoot networks",
+        "Certified in industry-standard networking protocols"
+      ]
     }
   ];
 
