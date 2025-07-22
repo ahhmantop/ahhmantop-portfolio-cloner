@@ -84,14 +84,13 @@ export default function Hero() {
             {/* Profile Photo */}
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-blue-flow/50 shadow-2xl shadow-blue-flow/20">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-border shadow-lg">
                   <img 
                     src="/lovable-uploads/edce9023-b8bd-40b0-b3ae-1d730c7c002e.png" 
                     alt="Alex Chen - Profile Photo" 
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-flow/20 to-transparent pointer-events-none"></div>
               </div>
             </div>
             
