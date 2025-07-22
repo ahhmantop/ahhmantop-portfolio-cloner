@@ -26,22 +26,6 @@ export default function Education() {
 
   const certifications = [
     {
-      title: "Full Stack Web Development",
-      subtitle: "Intensive Bootcamp",
-      institution: "Hacktiv8 Indonesia",
-      location: "Jakarta, Indonesia",
-      period: "2020",
-      status: "Outstanding",
-      grade: "Certified",
-      description: "Intensive 12-week bootcamp covering modern web development technologies including React, Node.js, and cloud deployment. Built multiple real-world projects.",
-      keySubjects: ["React.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL", "AWS Deployment"],
-      achievements: [
-        "Top 10% of cohort",
-        "Successfully deployed 5 full-stack applications",
-        "Mentored junior bootcamp students"
-      ]
-    },
-    {
       title: "CCNA - Cisco Certified Network Associate",
       subtitle: "Networking Certification",
       institution: "Cisco Systems",
