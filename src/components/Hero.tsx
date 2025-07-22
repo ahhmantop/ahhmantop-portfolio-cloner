@@ -80,17 +80,33 @@ export default function Hero() {
         </div>
 
         <div className="space-y-8 fade-in">
-          <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-bold text-blue-flow glow-text">
-              Alex Chen
-            </h1>
-            <div className="text-2xl md:text-3xl text-foreground typewriter">
-              Software Engineer & Developer
+          <div className="space-y-6">
+            {/* Profile Photo */}
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-blue-flow/50 shadow-2xl shadow-blue-flow/20">
+                  <img 
+                    src="/lovable-uploads/edce9023-b8bd-40b0-b3ae-1d730c7c002e.png" 
+                    alt="Alex Chen - Profile Photo" 
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-flow/20 to-transparent pointer-events-none"></div>
+              </div>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Recent Computer Science graduate passionate about creating innovative web applications 
-              and exploring the vast universe of technology.
-            </p>
+            
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-8xl font-bold text-blue-flow glow-text">
+                Alex Chen
+              </h1>
+              <div className="text-2xl md:text-3xl text-foreground typewriter">
+                Software Engineer & Developer
+              </div>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Recent Computer Science graduate passionate about creating innovative web applications 
+                and exploring the vast universe of technology.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
