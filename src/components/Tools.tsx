@@ -3,6 +3,22 @@ import { VscCode } from "react-icons/vsc";
 export default function Tools() {
   // All tech skills in one array for the scrolling animation
   const allSkills = [{
+    name: "VS Code",
+    icon: VscCode,
+    color: "#007ACC"
+  }, {
+    name: "GitHub",
+    icon: SiGithub,
+    color: "#181717"
+  }, {
+    name: "Docker",
+    icon: SiDocker,
+    color: "#2496ED"
+  }, {
+    name: "Python",
+    icon: SiPython,
+    color: "#3776AB"
+  }, {
     name: "React",
     icon: SiReact,
     color: "#61DAFB"
@@ -27,10 +43,6 @@ export default function Tools() {
     icon: SiNodedotjs,
     color: "#339933"
   }, {
-    name: "Python",
-    icon: SiPython,
-    color: "#3776AB"
-  }, {
     name: "MongoDB",
     icon: SiMongodb,
     color: "#47A248"
@@ -43,21 +55,9 @@ export default function Tools() {
     icon: SiAmazonwebservices,
     color: "#FF9900"
   }, {
-    name: "Docker",
-    icon: SiDocker,
-    color: "#2496ED"
-  }, {
     name: "Git",
     icon: SiGit,
     color: "#F05032"
-  }, {
-    name: "GitHub",
-    icon: SiGithub,
-    color: "#181717"
-  }, {
-    name: "VS Code",
-    icon: VscCode,
-    color: "#007ACC"
   }, {
     name: "Figma",
     icon: SiFigma,
