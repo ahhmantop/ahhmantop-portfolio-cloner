@@ -135,16 +135,16 @@ export default function Tools() {
 
         {/* Scrolling Tech Icons */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-right">
+          <div className="flex animate-scroll-slow">
             {duplicatedSkills.map((skill, index) => {
             const IconComponent = skill.icon;
-            return <div key={index} className="flex-shrink-0 mx-6 flex flex-col items-center justify-center group">
-                  <div className="w-16 h-16 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 group-hover:border-white/30 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/10">
-                    <IconComponent size={32} className="transition-all duration-300 group-hover:scale-110" style={{
+            return <div key={index} className="flex-shrink-0 mx-4 md:mx-6 flex flex-col items-center justify-center group min-w-[80px] md:min-w-[96px]">
+                  <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 group-hover:border-white/30 transition-all duration-300 group-hover:scale-110 group-hover:bg-white/10">
+                    <IconComponent size={24} className="md:w-8 md:h-8 transition-all duration-300 group-hover:scale-110" style={{
                   color: skill.color
                 }} />
                   </div>
-                  <span className="text-xs text-muted-foreground mt-3 text-center group-hover:text-foreground transition-colors duration-300 font-medium">
+                  <span className="text-xs text-muted-foreground mt-2 md:mt-3 text-center group-hover:text-foreground transition-colors duration-300 font-medium">
                     {skill.name}
                   </span>
                 </div>;

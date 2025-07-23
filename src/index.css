@@ -239,6 +239,10 @@
     animation: scrollRight 15s linear infinite;
   }
 
+  .animate-scroll-slow {
+    animation: scrollRight 25s linear infinite;
+  }
+
   /* Loading Screen Animations */
   .loading-spaceship {
     animation: spaceshipFly 2s ease-in-out infinite, rocketGlow 2s ease-in-out infinite;
