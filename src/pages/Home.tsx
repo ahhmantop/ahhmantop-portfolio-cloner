@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -5,8 +6,18 @@ import Tools from "@/components/Tools";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
   return (
     <div className="space-background text-white min-h-screen">
       <div className="stars"></div>

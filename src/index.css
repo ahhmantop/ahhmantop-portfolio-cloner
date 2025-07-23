@@ -238,6 +238,53 @@
   .animate-scroll-right {
     animation: scrollRight 15s linear infinite;
   }
+
+  /* Loading Screen Animations */
+  .loading-spaceship {
+    animation: spaceshipFly 2s ease-in-out infinite, rocketGlow 2s ease-in-out infinite;
+  }
+
+  .loading-trail {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, hsl(var(--blue-flow)), transparent);
+    animation: trail 2s ease-in-out infinite;
+    transform: translateY(-50%);
+  }
+
+  .loading-dots span {
+    animation: loadingDots 1.5s ease-in-out infinite;
+  }
+
+  .loading-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: hsl(var(--blue-flow));
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+
+  .loading-particle-1 {
+    top: 20%;
+    left: 10%;
+    animation: floatParticle 3s ease-in-out infinite;
+  }
+
+  .loading-particle-2 {
+    top: 60%;
+    right: 15%;
+    animation: floatParticle 4s ease-in-out infinite reverse;
+  }
+
+  .loading-particle-3 {
+    bottom: 30%;
+    left: 20%;
+    animation: floatParticle 3.5s ease-in-out infinite;
+  }
 }
 
 @keyframes flow {
@@ -287,5 +334,59 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes spaceshipFly {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(5deg); 
+  }
+}
+
+@keyframes rocketGlow {
+  0%, 100% { 
+    filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3)); 
+  }
+  50% { 
+    filter: drop-shadow(0 0 20px rgba(14, 165, 233, 0.8)); 
+  }
+}
+
+@keyframes trail {
+  0% { 
+    opacity: 0; 
+    transform: translateY(-50%) scaleX(0); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-50%) scaleX(1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(-50%) scaleX(0); 
+  }
+}
+
+@keyframes loadingDots {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes floatParticle {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
+    opacity: 0.3; 
+  }
+  33% { 
+    transform: translateY(-20px) translateX(10px); 
+    opacity: 0.8; 
+  }
+  66% { 
+    transform: translateY(10px) translateX(-5px); 
+    opacity: 0.5; 
   }
 }
