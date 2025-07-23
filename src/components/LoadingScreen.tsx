@@ -26,7 +26,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center space-background transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 h-screen flex flex-col items-center justify-center space-background transition-opacity duration-500 ${
         isComplete ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
