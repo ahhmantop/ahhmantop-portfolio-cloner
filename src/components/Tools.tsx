@@ -139,23 +139,6 @@ function greeting() {
 
 console.log(greeting()); // Hello, Daffa!`
     },
-    typescript: {
-      name: "TypeScript", 
-      code: `// TypeScript
-interface User {
-  name: string;
-  age: number;
-}
-
-const user: User = {
-  name: "Daffa",
-  age: 25
-};
-
-function greetUser(user: User): string {
-  return \`Hello, \${user.name}!\`;
-}`
-    },
     python: {
       name: "Python",
       code: `# Python
@@ -167,20 +150,12 @@ def greeting():
 
 print(greeting())  # Hello, Daffa!`
     },
-    php: {
-      name: "PHP",
-      code: `<?php
-// PHP
-$arr = ["Daffa", "Kunnia", "Fatah"];
-
-function greeting() {
-    global $arr;
-    $name = array_search("Daffa", $arr) !== false ? "Daffa" : null;
-    return "Hello, " . $name . "!";
-}
-
-echo greeting(); // Hello, Daffa!
-?>`
+    braintlog: {
+      name: "Braintlog",
+      code: `skibidi main {
+    yapping("sheeeesh! World! 🔥");
+    bussin 0;
+}`
     }
   };
 
@@ -199,13 +174,13 @@ echo greeting(); // Hello, Daffa!
         <div className="mb-20">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Just a few of my skills using some programming languages that I've learned and mastered
+              Just a few of my skills using some programming languages that I've learned
             </h3>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <Tabs defaultValue="javascript" className="w-full">
-              <TabsList className="grid w-full grid-cols-4 bg-black/20 border border-white/10">
+              <TabsList className="grid w-full grid-cols-3 bg-black/20 border border-white/10">
                 {Object.entries(programmingSkills).map(([key, skill]) => (
                   <TabsTrigger 
                     key={key} 
