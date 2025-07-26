@@ -129,33 +129,33 @@ export default function Tools() {
   const programmingSkills = {
     javascript: {
       name: "JavaScript",
-      code: `// JavaScript
-const arr = ["Daffa", "Kunnia", "Fatah"];
-
-function greeting() {
-  const name = arr.find((item) => item === "Daffa");
-  return \`Hello, \${name}!\`;
-}
-
-console.log(greeting()); // Hello, Daffa!`
+      code: `<span class="text-gray-500">1</span>  <span class="text-gray-500">// JavaScript</span>
+<span class="text-gray-500">2</span>  <span class="text-blue-400">const</span> <span class="text-white">arr</span> = [<span class="text-orange-400">"Daffa"</span>, <span class="text-orange-400">"Kunnia"</span>, <span class="text-orange-400">"Fatah"</span>];
+<span class="text-gray-500">3</span>  
+<span class="text-gray-500">4</span>  <span class="text-blue-400">function</span> <span class="text-yellow-300">greeting</span>() {
+<span class="text-gray-500">5</span>    <span class="text-blue-400">const</span> <span class="text-white">name</span> = <span class="text-white">arr</span>.<span class="text-yellow-300">find</span>((<span class="text-white">item</span>) => <span class="text-white">item</span> === <span class="text-orange-400">"Daffa"</span>);
+<span class="text-gray-500">6</span>    <span class="text-blue-400">return</span> <span class="text-orange-400">\`Hello, \${name}!\`</span>;
+<span class="text-gray-500">7</span>  }
+<span class="text-gray-500">8</span>  
+<span class="text-gray-500">9</span>  <span class="text-white">console</span>.<span class="text-yellow-300">log</span>(<span class="text-yellow-300">greeting</span>()); <span class="text-gray-500">// Hello, Daffa!</span>`
     },
     python: {
       name: "Python",
-      code: `# Python
-arr = ["Daffa", "Kunnia", "Fatah"]
-
-def greeting():
-    name = next((item for item in arr if item == "Daffa"), None)
-    return f"Hello, {name}!"
-
-print(greeting())  # Hello, Daffa!`
+      code: `<span class="text-gray-500">1</span>  <span class="text-gray-500"># Python</span>
+<span class="text-gray-500">2</span>  <span class="text-white">arr</span> = [<span class="text-orange-400">"Daffa"</span>, <span class="text-orange-400">"Kunnia"</span>, <span class="text-orange-400">"Fatah"</span>]
+<span class="text-gray-500">3</span>  
+<span class="text-gray-500">4</span>  <span class="text-blue-400">def</span> <span class="text-yellow-300">greeting</span>():
+<span class="text-gray-500">5</span>      <span class="text-white">name</span> = <span class="text-yellow-300">next</span>((<span class="text-white">item</span> <span class="text-blue-400">for</span> <span class="text-white">item</span> <span class="text-blue-400">in</span> <span class="text-white">arr</span> <span class="text-blue-400">if</span> <span class="text-white">item</span> == <span class="text-orange-400">"Daffa"</span>), <span class="text-blue-400">None</span>)
+<span class="text-gray-500">6</span>      <span class="text-blue-400">return</span> <span class="text-orange-400">f"Hello, {name}!"</span>
+<span class="text-gray-500">7</span>  
+<span class="text-gray-500">8</span>  <span class="text-yellow-300">print</span>(<span class="text-yellow-300">greeting</span>())  <span class="text-gray-500"># Hello, Daffa!</span>`
     },
     braintlog: {
       name: "Braintlog",
-      code: `skibidi main {
-    yapping("sheeeesh! World! 🔥");
-    bussin 0;
-}`
+      code: `<span class="text-gray-500">1</span>  <span class="text-blue-400">skibidi</span> <span class="text-yellow-300">main</span> {
+<span class="text-gray-500">2</span>      <span class="text-yellow-300">yapping</span>(<span class="text-orange-400">"sheeeesh! World! 🔥"</span>);
+<span class="text-gray-500">3</span>      <span class="text-blue-400">bussin</span> <span class="text-purple-400">0</span>;
+<span class="text-gray-500">4</span>  }`
     }
   };
 
@@ -196,7 +196,7 @@ print(greeting())  # Hello, Daffa!`
                 <TabsContent key={key} value={key} className="mt-6">
                   <div className="bg-[#1e1e1e] backdrop-blur-sm border border-white/10 rounded-lg p-6">
                     <pre className="text-sm overflow-x-auto">
-                      <code className="text-[#d4d4d4] font-mono">{skill.code}</code>
+                      <code className="font-mono" dangerouslySetInnerHTML={{ __html: skill.code }} />
                     </pre>
                   </div>
                 </TabsContent>
