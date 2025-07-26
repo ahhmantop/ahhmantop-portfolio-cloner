@@ -194,9 +194,9 @@ print(greeting())  # Hello, Daffa!`
               
               {Object.entries(programmingSkills).map(([key, skill]) => (
                 <TabsContent key={key} value={key} className="mt-6">
-                  <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                  <div className="bg-[#1e1e1e] backdrop-blur-sm border border-white/10 rounded-lg p-6">
                     <pre className="text-sm overflow-x-auto">
-                      <code className="text-green-400">{skill.code}</code>
+                      <code className="text-[#d4d4d4] font-mono">{skill.code}</code>
                     </pre>
                   </div>
                 </TabsContent>
