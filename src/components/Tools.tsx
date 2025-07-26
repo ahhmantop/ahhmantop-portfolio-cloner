@@ -1,5 +1,7 @@
 import { SiReact, SiTypescript, SiNextdotjs, SiVuedotjs, SiTailwindcss, SiNodedotjs, SiPython, SiMongodb, SiPostgresql, SiAmazonwebservices, SiDocker, SiGit, SiGithub, SiFigma, SiExpress, SiDjango, SiLaravel, SiMysql, SiFirebase, SiKubernetes, SiJest, SiWebpack, SiVite, SiSass, SiHtml5, SiCss3, SiPhp, SiRedis } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
+import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Tools() {
   // All tech skills in one array for the scrolling animation
   const allSkills = [{
@@ -122,6 +124,66 @@ export default function Tools() {
 
   // Duplicate the array for seamless loop
   const duplicatedSkills = [...allSkills, ...allSkills];
+
+  // Programming skills with code examples
+  const programmingSkills = {
+    javascript: {
+      name: "JavaScript",
+      code: `// JavaScript
+const arr = ["Daffa", "Kunnia", "Fatah"];
+
+function greeting() {
+  const name = arr.find((item) => item === "Daffa");
+  return \`Hello, \${name}!\`;
+}
+
+console.log(greeting()); // Hello, Daffa!`
+    },
+    typescript: {
+      name: "TypeScript", 
+      code: `// TypeScript
+interface User {
+  name: string;
+  age: number;
+}
+
+const user: User = {
+  name: "Daffa",
+  age: 25
+};
+
+function greetUser(user: User): string {
+  return \`Hello, \${user.name}!\`;
+}`
+    },
+    python: {
+      name: "Python",
+      code: `# Python
+arr = ["Daffa", "Kunnia", "Fatah"]
+
+def greeting():
+    name = next((item for item in arr if item == "Daffa"), None)
+    return f"Hello, {name}!"
+
+print(greeting())  # Hello, Daffa!`
+    },
+    php: {
+      name: "PHP",
+      code: `<?php
+// PHP
+$arr = ["Daffa", "Kunnia", "Fatah"];
+
+function greeting() {
+    global $arr;
+    $name = array_search("Daffa", $arr) !== false ? "Daffa" : null;
+    return "Hello, " . $name . "!";
+}
+
+echo greeting(); // Hello, Daffa!
+?>`
+    }
+  };
+
   return <section id="tools" className="py-20 px-6 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -131,6 +193,41 @@ export default function Tools() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Technologies I use to bring ideas to life across the digital universe
           </p>
+        </div>
+
+        {/* Programming Skills Showcase */}
+        <div className="mb-20">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Just a few of my skills using some programming languages that I've learned and mastered
+            </h3>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <Tabs defaultValue="javascript" className="w-full">
+              <TabsList className="grid w-full grid-cols-4 bg-black/20 border border-white/10">
+                {Object.entries(programmingSkills).map(([key, skill]) => (
+                  <TabsTrigger 
+                    key={key} 
+                    value={key}
+                    className="data-[state=active]:bg-white/10 data-[state=active]:text-foreground text-muted-foreground"
+                  >
+                    {skill.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              
+              {Object.entries(programmingSkills).map(([key, skill]) => (
+                <TabsContent key={key} value={key} className="mt-6">
+                  <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-lg p-6">
+                    <pre className="text-sm overflow-x-auto">
+                      <code className="text-green-400">{skill.code}</code>
+                    </pre>
+                  </div>
+                </TabsContent>
+              ))}
+            </Tabs>
+          </div>
         </div>
 
         {/* Scrolling Tech Icons */}
